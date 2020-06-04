@@ -280,4 +280,197 @@
         <tag>numpy</tag>
       </tags>
   </entry>
+  <entry>
+    <title>hexo 个人博客创建</title>
+    <url>/Node/Hexo%20%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%20%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BA/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="快速搭建hexo个人博客"><a href="#快速搭建hexo个人博客" class="headerlink" title="快速搭建hexo个人博客"></a>快速搭建hexo个人博客</h1><p>​        本文介绍简单搭建hexo个人博客，其他升阶的功能不在此详述。</p>
+<h2 id="前置准备"><a href="#前置准备" class="headerlink" title="前置准备"></a>前置准备</h2><p>本地需求</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">node.js</span><br><span class="line">npm(cnpm 使用淘宝镜像源)</span><br><span class="line">github账号</span><br><span class="line">个人域名(非必要)</span><br></pre></td></tr></table></figure>
+<p>个人环境信息</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">Windows 10</span><br><span class="line">node.js ver12.16.1</span><br><span class="line">npm ver6.13.4</span><br></pre></td></tr></table></figure>
+<h3 id="创建git仓库"><a href="#创建git仓库" class="headerlink" title="创建git仓库"></a>创建git仓库</h3><p>​    使用github pages作为服务器搭建博客比起传统搭建过程更为简单</p>
+<p>​    创建GitHub仓库，名字格式必须为:你的用户名.github.io,假如你的用户名为userdemo,则仓库名为userdemo.github.io.</p>
+<h3 id="Windows安装git-bash"><a href="#Windows安装git-bash" class="headerlink" title="Windows安装git bash"></a>Windows安装git bash</h3><p>​    在<a href="https://gitforwindows.org/" target="_blank" rel="noopener">https://gitforwindows.org/</a> 安装git bash命令行工具。至于git的基本操作可以去看廖雪峰老师的git教程<a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener">https://www.liaoxuefeng.com/wiki/896043488029600</a></p>
+<p>​    安装完毕后，进入git bash,输入：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ssh-keygen -t rsa -C <span class="string">"你的邮件地址"</span></span></span><br></pre></td></tr></table></figure>
+<p>生成ssh密钥，连续回车生成密钥文件，默认在用户目录下的.ssh\id_rsa.pub文件，用记事本打开复制里面的代码，登录github,点击用户下拉栏里的Settings，选择左侧SSH and GPG keys配置密钥(标题无限制)。</p>
+<p><img src="https://i.loli.net/2020/06/04/XHiKefl9FmZ6OJD.png" alt=""></p>
+<p>在git bash里输入：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ssh -T git@github.com</span></span><br></pre></td></tr></table></figure>
+<p>若密钥配置成功则如下</p>
+<p><img src="https://i.loli.net/2020/06/04/j9CM8yQ65cx4zit.png" alt=""></p>
+<p>接着配置本地用户信息：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git config --global user.name <span class="string">"你的github用户名"</span> </span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git config --global user.email <span class="string">"你的github注册邮箱"</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="安装Node"><a href="#安装Node" class="headerlink" title="安装Node"></a>安装Node</h3><ol>
+<li>Node官网<a href="https://nodejs.org/zh-cn/下载安装（PS：安装中注意选择Add" target="_blank" rel="noopener">https://nodejs.org/zh-cn/下载安装（PS：安装中注意选择Add</a> to path配置环境变量）。</li>
+<li>安装结束后输入</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+<p>确认Node与npm的版本</p>
+<p>​    3.设置淘宝镜像源</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+<p>之后使用npm install <em>改用cnpm install</em>会大幅度提升下载速度</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cnpm install *</span><br></pre></td></tr></table></figure>
+<h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cnpm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+<p>初始化</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo init blog # blog为你的项目名</span><br><span class="line">cd blog</span><br><span class="line">cnpm install # 安装模块</span><br><span class="line">hexo s #开启服务器 s = server</span><br></pre></td></tr></table></figure>
+<p>hexo常见指令：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>No</th>
+<th>命令</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>hexo server 或 hexo s</td>
+<td>启动服务器</td>
+</tr>
+<tr>
+<td>2</td>
+<td>hexo generate</td>
+<td>生成静态页面到public目录</td>
+</tr>
+<tr>
+<td>3</td>
+<td>hexo new page pagename</td>
+<td>新建页面(pagename=页面名)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>hexo new article</td>
+<td>新建文章(article=文章名)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>hexo deploy 或 hexo d</td>
+<td>将hexo部署到github</td>
+</tr>
+<tr>
+<td>6</td>
+<td>hexo clean</td>
+<td>清空生成</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>输入hexo server启用服务器，在localhost:4000 预览界面。</p>
+<h2 id="配置hexo"><a href="#配置hexo" class="headerlink" title="配置hexo"></a>配置hexo</h2><p>在项目根目录里配置_config.yml(PS : yml格式的键值对冒号后有一个空格)</p>
+<h3 id="网站参数"><a href="#网站参数" class="headerlink" title="网站参数"></a>网站参数</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>title</td>
+<td>网站总标题</td>
+</tr>
+<tr>
+<td>subtitle</td>
+<td>网站子标题</td>
+</tr>
+<tr>
+<td>description</td>
+<td>网站描述</td>
+</tr>
+<tr>
+<td>author</td>
+<td>发布者名</td>
+</tr>
+<tr>
+<td>language</td>
+<td>语言</td>
+</tr>
+<tr>
+<td>timezone</td>
+<td>时区:GMT、UTC等</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="网址参数"><a href="#网址参数" class="headerlink" title="网址参数"></a>网址参数</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>url</td>
+<td>你的网站的域名</td>
+</tr>
+<tr>
+<td>root</td>
+<td>根目录</td>
+</tr>
+<tr>
+<td>permalink</td>
+<td>文章格式</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">permalink</span> <span class="comment">#格式：</span></span><br><span class="line">	<span class="string">:year/:month/:day/:title/</span> <span class="comment">#年/月/日/标题/</span></span><br><span class="line">	<span class="string">:year-:month-:day-:title.html</span> <span class="comment">#年-月-日-标题</span></span><br><span class="line">	<span class="string">:category/:title/</span> <span class="comment"># 分类/标题/</span></span><br></pre></td></tr></table></figure>
+<h3 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h3><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">landscape</span></span><br></pre></td></tr></table></figure>
+<p>配置其他主题（以next为例，更多见<a href="https://hexo.io/themes" target="_blank" rel="noopener">https://hexo.io/themes</a>)</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/theme-next/hexo-theme-next.git themes/next</span><br></pre></td></tr></table></figure>
+<p>在项目根目录里鼠标右键点击git bash里将buttefly克隆到本地工程中；再将上述theme的值修改为next,此时使用hexo clean先清空一下缓存，再使用hexo s启动服务器。</p>
+<p>更多next的配置见<a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">http://theme-next.iissnan.com/</a></p>
+<h2 id="创建页面"><a href="#创建页面" class="headerlink" title="创建页面"></a>创建页面</h2><p>使用命令：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo new page pagename #pagename = 你的页面名</span><br></pre></td></tr></table></figure>
+<p>创建新的页面，在你的项目根目录打开source文件夹可以看见你刚才创建的页面的目录，打开里面的inedx.md.</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line">上述md打开的三根杠见配置页面信息，，一般默认有title: 文章的文件名，data: 生成日期。</span><br><span class="line">其余参数配置以及教程见 https://hexo.io/zh-cn/docs/front-matter</span><br></pre></td></tr></table></figure>
+<p>以下以建立标签tags页为例创建tags页面：</p>
+<p>输入命令：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure>
+<p>进入根目录下的source的tags配置index.md，配置type: “tags”</p>
+<p>在文章的md中设置：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 文章名</span><br><span class="line">data: 日期</span><br><span class="line">tags: </span><br><span class="line">	- 标签1</span><br><span class="line">	- 标签2</span><br><span class="line">	- 标签3</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<h2 id="创建文章"><a href="#创建文章" class="headerlink" title="创建文章"></a>创建文章</h2><p>输入命令：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo new article_name #article_name 文章名</span><br></pre></td></tr></table></figure>
+<p>生成的文章文件会出现在根目录source的_posts里，打开article_name.md,在“三杠”下书写文章。三杠中的categories配置文章种类，tags配置标签；description配置文章摘要；</p>
+<p>在文章中使用</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">blog-message</span><br><span class="line"><span class="comment">&lt;!--more--&gt;</span></span><br><span class="line">blog-message</span><br></pre></td></tr></table></figure>
+<p>在more之前的会被显示作为博文信息，之后会被隐藏作为Read More。</p>
+<h2 id="发布到GitHub"><a href="#发布到GitHub" class="headerlink" title="发布到GitHub"></a>发布到GitHub</h2><p>安装插件</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">cnpm install hexo<span class="literal">-deployer</span><span class="literal">-git</span> -<span class="literal">-save</span></span><br></pre></td></tr></table></figure>
+<p>同时在根目录的_config.yml的deploy配置：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:你的用户名/你的用户名.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span> <span class="comment">#默认</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo generate #将md转换为html</span><br><span class="line">hexo deploy #部署到github</span><br></pre></td></tr></table></figure>
+<h2 id="配置域名"><a href="#配置域名" class="headerlink" title="配置域名"></a>配置域名</h2><p>​        此处以阿里云为例：</p>
+<p>进入控制台</p>
+<p><img src="https://i.loli.net/2020/06/04/6pEkGAqhu5wYaBd.png" alt=""></p>
+<p>点击控制台-域名-域名注册，输入你想要的域名：</p>
+<p>以abc-daydayenglish.cn为例</p>
+<p><img src="https://i.loli.net/2020/06/04/ZaMurUs8wCS2Kj5.png" alt=""></p>
+<p>完成个人信息认证并购买、认证后，设置域名。</p>
+<p>进入控制台-域名-域名列表：</p>
+<p>选择自己刚才购买的域名-域名解析：添加解析设置如下</p>
+<p><img src="https://i.loli.net/2020/06/04/LnqDoZTy8gXS3OC.png" alt=""></p>
+<p>其中github仓库ip通过cmd ping 你的github用户名.github.io获取。</p>
+<p>同时设置你的项目根目录_config.yml里的url为你的域名。</p>
+<p><img src="https://i.loli.net/2020/06/04/gPj4D6kpcdvyIoW.png" alt=""></p>
+<p>在custom domain中输入你的域名如：xxxx.com</p>
+<p>之后重新输入</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo g d</span><br></pre></td></tr></table></figure>
+<p>发布成功，更多教程见<a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">https://hexo.io/zh-cn/</a></p>
+]]></content>
+      <categories>
+        <category>Node</category>
+      </categories>
+      <tags>
+        <tag>Node</tag>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
 </search>
