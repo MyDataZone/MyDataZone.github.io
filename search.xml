@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/uncategorized/hello-world/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+    <title>Python 列表切片的使用</title>
+    <url>/Python/Slice/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="Python-切片的使用"><a href="#Python-切片的使用" class="headerlink" title="Python 切片的使用"></a>Python 切片的使用</h1><h2 id="代码段"><a href="#代码段" class="headerlink" title="代码段"></a>代码段</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">ls = <span class="string">'ABCDEFGH'</span></span><br><span class="line"><span class="comment">#扫描0~len(ls)</span></span><br><span class="line">print(ls[:len(ls)])</span><br><span class="line"><span class="comment">#扫描-len(ls)~-1</span></span><br><span class="line">print(ls[-len(ls):])</span><br></pre></td></tr></table></figure>
+<h2 id="试验"><a href="#试验" class="headerlink" title="试验"></a>试验</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#创建字符串首尾空格删除函数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">mytrim</span><span class="params">(s)</span>:</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        <span class="keyword">if</span> s[:<span class="number">1</span>] == <span class="string">' '</span>:</span><br><span class="line">            <span class="keyword">return</span> mytrim(s[<span class="number">1</span>:])</span><br><span class="line">        <span class="keyword">elif</span> s[<span class="number">-1</span>:] == <span class="string">' '</span>:</span><br><span class="line">            <span class="keyword">return</span> mytrim(s[:<span class="number">-1</span>])</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> s</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        print(<span class="string">'Error'</span>)</span><br><span class="line">        <span class="keyword">return</span> s</span><br></pre></td></tr></table></figure>
 ]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>数据结构</tag>
+      </tags>
   </entry>
   <entry>
     <title>hexo 个人博客创建</title>
@@ -36,7 +36,7 @@
 <p>接着配置本地用户信息：</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git config --global user.name <span class="string">"你的github用户名"</span> </span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git config --global user.email <span class="string">"你的github注册邮箱"</span></span></span><br></pre></td></tr></table></figure>
 <h3 id="安装Node"><a href="#安装Node" class="headerlink" title="安装Node"></a>安装Node</h3><ol>
-<li>Node官网<a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">https://nodejs.org/zh-cn/</a>   下载安装（PS：安装中注意选择Add to path配置环境变量）。</li>
+<li>下载安装（PS：安装中注意选择Add to path配置环境变量)&lt;-Node官网<a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">https://nodejs.org/zh-cn/</a></li>
 <li>安装结束后输入</li>
 </ol>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
@@ -208,95 +208,18 @@
       </tags>
   </entry>
   <entry>
-    <title>Python 列表切片的使用</title>
-    <url>/Python/Slice/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="Python-切片的使用"><a href="#Python-切片的使用" class="headerlink" title="Python 切片的使用"></a>Python 切片的使用</h1><h2 id="代码段"><a href="#代码段" class="headerlink" title="代码段"></a>代码段</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">ls = <span class="string">'ABCDEFGH'</span></span><br><span class="line"><span class="comment">#扫描0~len(ls)</span></span><br><span class="line">print(ls[:len(ls)])</span><br><span class="line"><span class="comment">#扫描-len(ls)~-1</span></span><br><span class="line">print(ls[-len(ls):])</span><br></pre></td></tr></table></figure>
-<h2 id="试验"><a href="#试验" class="headerlink" title="试验"></a>试验</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#创建字符串首尾空格删除函数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">mytrim</span><span class="params">(s)</span>:</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        <span class="keyword">if</span> s[:<span class="number">1</span>] == <span class="string">' '</span>:</span><br><span class="line">            <span class="keyword">return</span> mytrim(s[<span class="number">1</span>:])</span><br><span class="line">        <span class="keyword">elif</span> s[<span class="number">-1</span>:] == <span class="string">' '</span>:</span><br><span class="line">            <span class="keyword">return</span> mytrim(s[:<span class="number">-1</span>])</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> s</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        print(<span class="string">'Error'</span>)</span><br><span class="line">        <span class="keyword">return</span> s</span><br></pre></td></tr></table></figure>
+    <title>Hello World</title>
+    <url>/uncategorized/hello-world/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 ]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>数据结构</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>mybatis入门案例</title>
-    <url>/Java/mybatis%E5%85%A5%E9%97%A8%E6%A1%88%E4%BE%8B/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="MyBatis-入门案例"><a href="#MyBatis-入门案例" class="headerlink" title="MyBatis 入门案例"></a>MyBatis 入门案例</h1><h2 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h2><ol>
-<li><p>Mybatis 起源:起源于Apache的ibatis项目，2010年后迁至Google 更名为Mybatis，如今迁至Git上。 </p>
-</li>
-<li><p>Mybatis 作用:简化传统JDBC的操作，实现数据持久化。无需通过JDBC桥梁输入sql语句来进行表的增删改查,通过ORM技术简化Dao层。</p>
-</li>
-</ol>
-<a id="more"></a>
-<ol>
-<li><p>ORM :实现Java类与表的映射，直接通过修改Java类便可进行对象表的修改。</p>
-</li>
-<li><p>与Hibernate的联系及区别：</p>
-<ul>
-<li>hibernate上手难度略大于mybatis</li>
-<li>hibernate拥有者优秀的映射系统，可以根据实体类生成表结构，以及HQL语言优化、简化了不少sql语句的书写；而MyBatis需要手写sql语句，复杂的sql和建立映射关系需要xml文件的配置。</li>
-<li>相应的，mybatis可以做更细致的sql优化。</li>
-</ul>
-</li>
-</ol>
-<h2 id="基本配置流程"><a href="#基本配置流程" class="headerlink" title="基本配置流程"></a>基本配置流程</h2><p><img src="https://i.loli.net/2020/06/04/IEVbspFG5ZqeOc7.png" alt="mybatis period"></p>
-<h3 id="配置总体文件"><a href="#配置总体文件" class="headerlink" title="配置总体文件"></a>配置总体文件</h3><p>​        于根目录下创建xml配置文件,将对应头文件字符串拷贝粘贴。其中default与id保持一致，transactionManager此处使用JDBC管理，dataSource 类型为POOL -&gt; 连接池类型。其它按照JDBC连接初始化设置。</p>
-<p>​        mapper设置对应mapper的classpath字段</p>
-<p>​        sqlMapConfig.xml 配置</p>
-<p>​        <img src="https://i.loli.net/2020/06/04/vAtFUfbMsdN24nm.png" alt="sqlMapConfig.xml jpg"></p>
-<h3 id="数据库以及实体类创建"><a href="#数据库以及实体类创建" class="headerlink" title="数据库以及实体类创建"></a>数据库以及实体类创建</h3><p>​        数据库：</p>
-<p>​        <img src="https://i.loli.net/2020/06/04/wYVinCkI2M9cdhL.png" alt="User 表"></p>
-<p>​        pojo:        </p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> u_id;</span><br><span class="line">    <span class="keyword">private</span> String u_username;</span><br><span class="line">    <span class="keyword">private</span> String u_userpassword;</span><br><span class="line">    <span class="comment">//省略get、set以及构造方法</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="配置映射文件"><a href="#配置映射文件" class="headerlink" title="配置映射文件"></a>配置映射文件</h3><p>​        配置xml文件,mapper下属性输入命名空间（xml路径,不带格式）,select下输入sql语句配置id,返回对象类型(之前创建,对象与表一一对应),匹配参数类型（图中案例一为int类型）,接着为标准sql查询语句（注意无分号’;’）,匹配参数:</p>
-<p>​        例：u_id在案例中为int类型符合parameterType参数属性，匹配项为#{字段}(基本数据字段以及String无需与表中字段保持一致)格式。</p>
-<p>​        <img src="https://i.loli.net/2020/06/04/se1IHznpJEtS267.png" alt="userMapper.xml png"></p>
-<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>​        </p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test01</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">try</span>&#123;</span><br><span class="line">        Reader reader = Resources.getResourceAsReader(<span class="string">"sqlMapConfig.xml"</span>);</span><br><span class="line">        <span class="comment">//获取SqlSessionFactory对象得到sqlSessionFactory实例</span></span><br><span class="line">        SqlSessionFactory sessionFactory = <span class="keyword">new</span> SqlSessionFactoryBuilder().build(reader);    </span><br><span class="line">    	<span class="comment">//获取“数据会话层”对象SqlSession~JDBC Cnonection对象</span></span><br><span class="line">        SqlSession session = sessionFactory.openSession();</span><br><span class="line">        <span class="comment">//mybatis会根据命名空间.id搜索对应语句</span></span><br><span class="line">        String statment = <span class="string">"com.mybatis.map.UserMapper.selAllById"</span>;</span><br><span class="line">        User user1 = session.selectOne(statment,<span class="number">1</span>);</span><br><span class="line">        User user2 = session.selectOne(statment,<span class="number">2</span>);</span><br><span class="line">        <span class="keyword">if</span>(user1 == <span class="keyword">null</span> || user2 == <span class="keyword">null</span>)</span><br><span class="line">            System.out.println(<span class="string">"error"</span>);</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            System.out.println(<span class="string">"success"</span>);</span><br><span class="line">            System.out.println(user1 + <span class="string">"\n"</span> + user2);</span><br><span class="line">        &#125;</span><br><span class="line">        session.close();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">catch</span>(IOException e)&#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">finally</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"查询结束"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="参数分析"><a href="#参数分析" class="headerlink" title="参数分析"></a>参数分析</h3><p>​        1）    sqlMapConfig.xml:</p>
-<p>​        environment id=”test” 使用id = test 环境下的配置</p>
-<p>​        environment id=”development” 使用 id = development下的配置；上级标签<environments default=".">下可使用默认id即可进行数据库用户或数据库的更换。上方代码SqlSessionFactoryBuilder的build方法的第二个参数可以指定数据库环境,如””development或者”test”</p>
-<p>​    dataSource:数据源类型↓</p>
-<p>①  :POOLED 使用数据库连接池类似DBCP、C3P0、druid之类管理连接池工具以及进行数据库开关。</p>
-<p>②  :UNPOOLED 使用传统JDBC方式连接数据库，需手动管理。</p>
-<p>③  :JNDI 从Tomcat中获取一个内置的数据库连接池</p>
-<p>transactionManager type=”” 事务提交方式↓</p>
-<p>1）: JDBC 使用JDBC方式 进行事务提交 。(commit rollback close)&lt;手动&gt;</p>
-<p>2）: MANAGED 交给其他对象处理事务如Spring ，Jobss托管 .&lt;自动,使用后默认自动关闭连接&gt;</p>
-<p>2)    Mapper.xml</p>
-<p>1.namespace命名空间确定了该Mapper.xml ； 而里面语句标签的id确定了唯一一个语句，因此namespace+id确认唯一一组sql语句。</p>
-<p>2.Mybatis 中 SQL语句在形式上只能有一个输入、输出参数，如上述</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> student <span class="keyword">where</span> sno = <span class="comment">#&#123;sno&#125; and sex = #&#123;#sex&#125; . </span></span><br><span class="line">如果是单一的根据sno查询，只需要将parameterType的值设置为<span class="built_in">int</span>类型即可；但是Mybatis中不允许输入多个值。解决方案是采用复杂类型进行替换如数组,<span class="keyword">List</span>,<span class="keyword">Set</span>以及pojo类等。Mybatis约定，如果输入/输出参数为<span class="number">8</span>个基本类型或者<span class="keyword">String</span>，则可使用任意占位符<span class="comment">#&#123;xxxx&#125;；如果为对象类型，则必须使用对应Java类对应字段名作为占位符参数。如果返回值是对象类型，则无论返回一个或者多个，resultType均输入其全类名（可通过设置别名简化操作）。</span></span><br></pre></td></tr></table></figure>
-<p>3）mapper动态代理方式的DRUD(Mybatis接口开发)</p>
-<p>原则:约定优于配置(x.java &gt; x.xml)</p>
-<p>配置方式: eg : abc.xml .. </p>
-<p>编码方式: eg: abc.java</p>
-<p>Configuration con = new Configuration();  con.setName(“MyCon”);</p>
-<p>在以上进行SQL查询时需要定义字符串String statement = “namespace.”+”id” ; ，反反复复如此操作颇为麻烦 ， 因此在此使用动态代理 (接口开发) 。 </p>
-<p>创建接口，名称与对应映射文件名称一致(namespace的值与接口全类名相同),抽象方法返回值与resultType一致，形参与parameterType一致，方法名与xml中id一致。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//方法名以及返回与mapper.xml的id和param**一致</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">StudentMapper</span></span>&#123;</span><br><span class="line">    <span class="function">Student <span class="title">queryStudentById</span><span class="params">(<span class="keyword">int</span> id)</span></span>;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">addStudent</span><span class="params">(Student student)</span></span>;</span><br><span class="line">    </span><br><span class="line">    <span class="function">List&lt;Student&gt; <span class="title">queryAllStudent</span><span class="params">()</span></span>;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">updateStudent</span><span class="params">(Student student)</span></span>;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">deleteStudentById</span><span class="params">(<span class="keyword">int</span> id)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>优化后测试</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test02</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">try</span>&#123;</span><br><span class="line">        Reader reader = Resources.getResourceAsReader(<span class="string">"sqlMapConfig.xml"</span>);</span><br><span class="line">        SqlSessionFactory sessionFactory = <span class="keyword">new</span> SqlSessionFactoryBuilder().build(reader);    </span><br><span class="line">        SqlSession session = sessionFactory.openSession();</span><br><span class="line">    	StudentMapper mapper = session.getMapper(StudentMapper<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">    	Student stu1 = mapper.queryStudentById(<span class="number">2</span>);</span><br><span class="line">    	<span class="keyword">if</span>(stu1 != <span class="keyword">null</span>)</span><br><span class="line">            System.out.println(stu1);</span><br><span class="line">    	List&lt;Student&gt; students = mapper.queryAllStudent();</span><br><span class="line">    	<span class="keyword">if</span>(stuents != <span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">for</span>(Student stu : students)</span><br><span class="line">                System.out.println(stu);</span><br><span class="line">        &#125;</span><br><span class="line">    	Student s = <span class="keyword">new</span> Student(<span class="string">"Jack"</span>,<span class="keyword">true</span>,<span class="number">17</span>,<span class="keyword">new</span> Date());</span><br><span class="line">    	<span class="keyword">int</span> flag = mapper.addStudent(s);</span><br><span class="line">    	<span class="keyword">if</span>(flag!=<span class="number">0</span>)</span><br><span class="line">			System.out.println(<span class="string">"add successfully"</span>);</span><br><span class="line">    	session.close();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">catch</span>(IOException ex)&#123;</span><br><span class="line">        ex.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">finally</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"end"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="别名优化"><a href="#别名优化" class="headerlink" title="别名优化"></a>别名优化</h3><h4 id="单别名优化"><a href="#单别名优化" class="headerlink" title="单别名优化"></a>单别名优化</h4><p>​                在Mybatis总配置文件configuration标签中添加子标签<typeAliases></typeAliases>中进行别名优化，如上所述的com.mybatis.service.Student每次输入未免过于繁琐，进行如下设置可简化操作量。</p>
-<p>​                <img src="https://i.loli.net/2020/06/04/3WICliSmX7MZR5B.png" alt=""></p>
-<h4 id="集体优化"><a href="#集体优化" class="headerlink" title="集体优化"></a>集体优化</h4><p>​                    如上，在configuration加入子标签typeAliases下的子标签package,设置对应类的包的类路径，此时改包下的类名即别名(大小写无关)</p>
-<h3 id="基本映射"><a href="#基本映射" class="headerlink" title="基本映射"></a>基本映射</h3><p>​                    <img src="https://i.loli.net/2020/06/04/i2dqyaAjWvZTLlr.png" alt=""></p>
-<p>​                                                                基本关系映射</p>
-<p>​                    jdbc 与 java映射</p>
-<p>​            </p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">enum</span> JdbcType </span><br><span class="line">&#123;						<span class="comment">//&lt;-resultMap Mybatis封装枚举类型结构图</span></span><br><span class="line">	    ARRAY(<span class="number">2003</span>),</span><br><span class="line">	    BIT(-<span class="number">7</span>),</span><br><span class="line">	    TINYINT(-<span class="number">6</span>),</span><br><span class="line">	    SMALLINT(<span class="number">5</span>),</span><br><span class="line">	    INTEGER(<span class="number">4</span>),</span><br><span class="line">	    BIGINT(-<span class="number">5</span>),</span><br><span class="line">	    FLOAT(<span class="number">6</span>),</span><br><span class="line">	    REAL(<span class="number">7</span>),</span><br><span class="line">	    DOUBLE(<span class="number">8</span>),</span><br><span class="line">	    NUMERIC(<span class="number">2</span>),</span><br><span class="line">	    DECIMAL(<span class="number">3</span>),</span><br><span class="line">	    CHAR(<span class="number">1</span>),</span><br><span class="line">	    VARCHAR(<span class="number">12</span>),</span><br><span class="line">	    LONGVARCHAR(-<span class="number">1</span>),</span><br><span class="line">	    DATE(<span class="number">91</span>),</span><br><span class="line">	    TIME(<span class="number">92</span>),</span><br><span class="line">	    TIMESTAMP(<span class="number">93</span>),</span><br><span class="line">	    BINARY(-<span class="number">2</span>),</span><br><span class="line">	    VARBINARY(-<span class="number">3</span>),</span><br><span class="line">	    LONGVARBINARY(-<span class="number">4</span>),</span><br><span class="line">	    NULL(<span class="number">0</span>),</span><br><span class="line">	    OTHER(<span class="number">1111</span>),</span><br><span class="line">	    BLOB(<span class="number">2004</span>),</span><br><span class="line">	    CLOB(<span class="number">2005</span>),</span><br><span class="line">	    BOOLEAN(<span class="number">16</span>),</span><br><span class="line">	    CURSOR(-<span class="number">10</span>),</span><br><span class="line">	    UNDEFINED(-<span class="number">2147482648</span>),</span><br><span class="line">	    NVARCHAR(-<span class="number">9</span>),</span><br><span class="line">	    NCHAR(-<span class="number">15</span>),</span><br><span class="line">	    NCLOB(<span class="number">2011</span>),</span><br><span class="line">	    STRUCT(<span class="number">2002</span>),</span><br><span class="line">	    JAVA_OBJECT(<span class="number">2000</span>),</span><br><span class="line">	    DISTINCT(<span class="number">2001</span>),</span><br><span class="line">	    REF(<span class="number">2006</span>),</span><br><span class="line">	    DATALINK(<span class="number">70</span>),</span><br><span class="line">	    ROWID(-<span class="number">8</span>),</span><br><span class="line">	    LONGNVARCHAR(-<span class="number">16</span>),</span><br><span class="line">	    SQLXML(<span class="number">2009</span>),</span><br><span class="line">	    DATETIMEOFFSET(-<span class="number">155</span>);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>SQL</tag>
-        <tag>MyBatis</tag>
-      </tags>
   </entry>
   <entry>
     <title>Python numpy 库的使用</title>
@@ -471,6 +394,83 @@
         <tag>数据结构</tag>
         <tag>C++</tag>
         <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>mybatis入门案例</title>
+    <url>/Java/mybatis%E5%85%A5%E9%97%A8%E6%A1%88%E4%BE%8B/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="MyBatis-入门案例"><a href="#MyBatis-入门案例" class="headerlink" title="MyBatis 入门案例"></a>MyBatis 入门案例</h1><h2 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h2><ol>
+<li><p>Mybatis 起源:起源于Apache的ibatis项目，2010年后迁至Google 更名为Mybatis，如今迁至Git上。 </p>
+</li>
+<li><p>Mybatis 作用:简化传统JDBC的操作，实现数据持久化。无需通过JDBC桥梁输入sql语句来进行表的增删改查,通过ORM技术简化Dao层。</p>
+</li>
+</ol>
+<a id="more"></a>
+<ol>
+<li><p>ORM :实现Java类与表的映射，直接通过修改Java类便可进行对象表的修改。</p>
+</li>
+<li><p>与Hibernate的联系及区别：</p>
+<ul>
+<li>hibernate上手难度略大于mybatis</li>
+<li>hibernate拥有者优秀的映射系统，可以根据实体类生成表结构，以及HQL语言优化、简化了不少sql语句的书写；而MyBatis需要手写sql语句，复杂的sql和建立映射关系需要xml文件的配置。</li>
+<li>相应的，mybatis可以做更细致的sql优化。</li>
+</ul>
+</li>
+</ol>
+<h2 id="基本配置流程"><a href="#基本配置流程" class="headerlink" title="基本配置流程"></a>基本配置流程</h2><p><img src="https://i.loli.net/2020/06/04/IEVbspFG5ZqeOc7.png" alt="mybatis period"></p>
+<h3 id="配置总体文件"><a href="#配置总体文件" class="headerlink" title="配置总体文件"></a>配置总体文件</h3><p>​        于根目录下创建xml配置文件,将对应头文件字符串拷贝粘贴。其中default与id保持一致，transactionManager此处使用JDBC管理，dataSource 类型为POOL -&gt; 连接池类型。其它按照JDBC连接初始化设置。</p>
+<p>​        mapper设置对应mapper的classpath字段</p>
+<p>​        sqlMapConfig.xml 配置</p>
+<p>​        <img src="https://i.loli.net/2020/06/04/vAtFUfbMsdN24nm.png" alt="sqlMapConfig.xml jpg"></p>
+<h3 id="数据库以及实体类创建"><a href="#数据库以及实体类创建" class="headerlink" title="数据库以及实体类创建"></a>数据库以及实体类创建</h3><p>​        数据库：</p>
+<p>​        <img src="https://i.loli.net/2020/06/04/wYVinCkI2M9cdhL.png" alt="User 表"></p>
+<p>​        pojo:        </p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> u_id;</span><br><span class="line">    <span class="keyword">private</span> String u_username;</span><br><span class="line">    <span class="keyword">private</span> String u_userpassword;</span><br><span class="line">    <span class="comment">//省略get、set以及构造方法</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="配置映射文件"><a href="#配置映射文件" class="headerlink" title="配置映射文件"></a>配置映射文件</h3><p>​        配置xml文件,mapper下属性输入命名空间（xml路径,不带格式）,select下输入sql语句配置id,返回对象类型(之前创建,对象与表一一对应),匹配参数类型（图中案例一为int类型）,接着为标准sql查询语句（注意无分号’;’）,匹配参数:</p>
+<p>​        例：u_id在案例中为int类型符合parameterType参数属性，匹配项为#{字段}(基本数据字段以及String无需与表中字段保持一致)格式。</p>
+<p>​        <img src="https://i.loli.net/2020/06/04/se1IHznpJEtS267.png" alt="userMapper.xml png"></p>
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>​        </p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test01</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">try</span>&#123;</span><br><span class="line">        Reader reader = Resources.getResourceAsReader(<span class="string">"sqlMapConfig.xml"</span>);</span><br><span class="line">        <span class="comment">//获取SqlSessionFactory对象得到sqlSessionFactory实例</span></span><br><span class="line">        SqlSessionFactory sessionFactory = <span class="keyword">new</span> SqlSessionFactoryBuilder().build(reader);    </span><br><span class="line">    	<span class="comment">//获取“数据会话层”对象SqlSession~JDBC Cnonection对象</span></span><br><span class="line">        SqlSession session = sessionFactory.openSession();</span><br><span class="line">        <span class="comment">//mybatis会根据命名空间.id搜索对应语句</span></span><br><span class="line">        String statment = <span class="string">"com.mybatis.map.UserMapper.selAllById"</span>;</span><br><span class="line">        User user1 = session.selectOne(statment,<span class="number">1</span>);</span><br><span class="line">        User user2 = session.selectOne(statment,<span class="number">2</span>);</span><br><span class="line">        <span class="keyword">if</span>(user1 == <span class="keyword">null</span> || user2 == <span class="keyword">null</span>)</span><br><span class="line">            System.out.println(<span class="string">"error"</span>);</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            System.out.println(<span class="string">"success"</span>);</span><br><span class="line">            System.out.println(user1 + <span class="string">"\n"</span> + user2);</span><br><span class="line">        &#125;</span><br><span class="line">        session.close();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">catch</span>(IOException e)&#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">finally</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"查询结束"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="参数分析"><a href="#参数分析" class="headerlink" title="参数分析"></a>参数分析</h3><p>​        1）    sqlMapConfig.xml:</p>
+<p>​        environment id=”test” 使用id = test 环境下的配置</p>
+<p>​        environment id=”development” 使用 id = development下的配置；上级标签<environments default=".">下可使用默认id即可进行数据库用户或数据库的更换。上方代码SqlSessionFactoryBuilder的build方法的第二个参数可以指定数据库环境,如””development或者”test”</p>
+<p>​    dataSource:数据源类型↓</p>
+<p>①  :POOLED 使用数据库连接池类似DBCP、C3P0、druid之类管理连接池工具以及进行数据库开关。</p>
+<p>②  :UNPOOLED 使用传统JDBC方式连接数据库，需手动管理。</p>
+<p>③  :JNDI 从Tomcat中获取一个内置的数据库连接池</p>
+<p>transactionManager type=”” 事务提交方式↓</p>
+<p>1）: JDBC 使用JDBC方式 进行事务提交 。(commit rollback close)&lt;手动&gt;</p>
+<p>2）: MANAGED 交给其他对象处理事务如Spring ，Jobss托管 .&lt;自动,使用后默认自动关闭连接&gt;</p>
+<p>2)    Mapper.xml</p>
+<p>1.namespace命名空间确定了该Mapper.xml ； 而里面语句标签的id确定了唯一一个语句，因此namespace+id确认唯一一组sql语句。</p>
+<p>2.Mybatis 中 SQL语句在形式上只能有一个输入、输出参数，如上述</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> student <span class="keyword">where</span> sno = <span class="comment">#&#123;sno&#125; and sex = #&#123;#sex&#125; . </span></span><br><span class="line">如果是单一的根据sno查询，只需要将parameterType的值设置为<span class="built_in">int</span>类型即可；但是Mybatis中不允许输入多个值。解决方案是采用复杂类型进行替换如数组,<span class="keyword">List</span>,<span class="keyword">Set</span>以及pojo类等。Mybatis约定，如果输入/输出参数为<span class="number">8</span>个基本类型或者<span class="keyword">String</span>，则可使用任意占位符<span class="comment">#&#123;xxxx&#125;；如果为对象类型，则必须使用对应Java类对应字段名作为占位符参数。如果返回值是对象类型，则无论返回一个或者多个，resultType均输入其全类名（可通过设置别名简化操作）。</span></span><br></pre></td></tr></table></figure>
+<p>3）mapper动态代理方式的DRUD(Mybatis接口开发)</p>
+<p>原则:约定优于配置(x.java &gt; x.xml)</p>
+<p>配置方式: eg : abc.xml .. </p>
+<p>编码方式: eg: abc.java</p>
+<p>Configuration con = new Configuration();  con.setName(“MyCon”);</p>
+<p>在以上进行SQL查询时需要定义字符串String statement = “namespace.”+”id” ; ，反反复复如此操作颇为麻烦 ， 因此在此使用动态代理 (接口开发) 。 </p>
+<p>创建接口，名称与对应映射文件名称一致(namespace的值与接口全类名相同),抽象方法返回值与resultType一致，形参与parameterType一致，方法名与xml中id一致。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//方法名以及返回与mapper.xml的id和param**一致</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">StudentMapper</span></span>&#123;</span><br><span class="line">    <span class="function">Student <span class="title">queryStudentById</span><span class="params">(<span class="keyword">int</span> id)</span></span>;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">addStudent</span><span class="params">(Student student)</span></span>;</span><br><span class="line">    </span><br><span class="line">    <span class="function">List&lt;Student&gt; <span class="title">queryAllStudent</span><span class="params">()</span></span>;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">updateStudent</span><span class="params">(Student student)</span></span>;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">deleteStudentById</span><span class="params">(<span class="keyword">int</span> id)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>优化后测试</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test02</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">try</span>&#123;</span><br><span class="line">        Reader reader = Resources.getResourceAsReader(<span class="string">"sqlMapConfig.xml"</span>);</span><br><span class="line">        SqlSessionFactory sessionFactory = <span class="keyword">new</span> SqlSessionFactoryBuilder().build(reader);    </span><br><span class="line">        SqlSession session = sessionFactory.openSession();</span><br><span class="line">    	StudentMapper mapper = session.getMapper(StudentMapper<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">    	Student stu1 = mapper.queryStudentById(<span class="number">2</span>);</span><br><span class="line">    	<span class="keyword">if</span>(stu1 != <span class="keyword">null</span>)</span><br><span class="line">            System.out.println(stu1);</span><br><span class="line">    	List&lt;Student&gt; students = mapper.queryAllStudent();</span><br><span class="line">    	<span class="keyword">if</span>(stuents != <span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">for</span>(Student stu : students)</span><br><span class="line">                System.out.println(stu);</span><br><span class="line">        &#125;</span><br><span class="line">    	Student s = <span class="keyword">new</span> Student(<span class="string">"Jack"</span>,<span class="keyword">true</span>,<span class="number">17</span>,<span class="keyword">new</span> Date());</span><br><span class="line">    	<span class="keyword">int</span> flag = mapper.addStudent(s);</span><br><span class="line">    	<span class="keyword">if</span>(flag!=<span class="number">0</span>)</span><br><span class="line">			System.out.println(<span class="string">"add successfully"</span>);</span><br><span class="line">    	session.close();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">catch</span>(IOException ex)&#123;</span><br><span class="line">        ex.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">finally</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"end"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="别名优化"><a href="#别名优化" class="headerlink" title="别名优化"></a>别名优化</h3><h4 id="单别名优化"><a href="#单别名优化" class="headerlink" title="单别名优化"></a>单别名优化</h4><p>​                在Mybatis总配置文件configuration标签中添加子标签<typeAliases></typeAliases>中进行别名优化，如上所述的com.mybatis.service.Student每次输入未免过于繁琐，进行如下设置可简化操作量。</p>
+<p>​                <img src="https://i.loli.net/2020/06/04/3WICliSmX7MZR5B.png" alt=""></p>
+<h4 id="集体优化"><a href="#集体优化" class="headerlink" title="集体优化"></a>集体优化</h4><p>​                    如上，在configuration加入子标签typeAliases下的子标签package,设置对应类的包的类路径，此时改包下的类名即别名(大小写无关)</p>
+<h3 id="基本映射"><a href="#基本映射" class="headerlink" title="基本映射"></a>基本映射</h3><p>​                    <img src="https://i.loli.net/2020/06/04/i2dqyaAjWvZTLlr.png" alt=""></p>
+<p>​                                                                基本关系映射</p>
+<p>​                    jdbc 与 java映射</p>
+<p>​            </p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">enum</span> JdbcType </span><br><span class="line">&#123;						<span class="comment">//&lt;-resultMap Mybatis封装枚举类型结构图</span></span><br><span class="line">	    ARRAY(<span class="number">2003</span>),</span><br><span class="line">	    BIT(-<span class="number">7</span>),</span><br><span class="line">	    TINYINT(-<span class="number">6</span>),</span><br><span class="line">	    SMALLINT(<span class="number">5</span>),</span><br><span class="line">	    INTEGER(<span class="number">4</span>),</span><br><span class="line">	    BIGINT(-<span class="number">5</span>),</span><br><span class="line">	    FLOAT(<span class="number">6</span>),</span><br><span class="line">	    REAL(<span class="number">7</span>),</span><br><span class="line">	    DOUBLE(<span class="number">8</span>),</span><br><span class="line">	    NUMERIC(<span class="number">2</span>),</span><br><span class="line">	    DECIMAL(<span class="number">3</span>),</span><br><span class="line">	    CHAR(<span class="number">1</span>),</span><br><span class="line">	    VARCHAR(<span class="number">12</span>),</span><br><span class="line">	    LONGVARCHAR(-<span class="number">1</span>),</span><br><span class="line">	    DATE(<span class="number">91</span>),</span><br><span class="line">	    TIME(<span class="number">92</span>),</span><br><span class="line">	    TIMESTAMP(<span class="number">93</span>),</span><br><span class="line">	    BINARY(-<span class="number">2</span>),</span><br><span class="line">	    VARBINARY(-<span class="number">3</span>),</span><br><span class="line">	    LONGVARBINARY(-<span class="number">4</span>),</span><br><span class="line">	    NULL(<span class="number">0</span>),</span><br><span class="line">	    OTHER(<span class="number">1111</span>),</span><br><span class="line">	    BLOB(<span class="number">2004</span>),</span><br><span class="line">	    CLOB(<span class="number">2005</span>),</span><br><span class="line">	    BOOLEAN(<span class="number">16</span>),</span><br><span class="line">	    CURSOR(-<span class="number">10</span>),</span><br><span class="line">	    UNDEFINED(-<span class="number">2147482648</span>),</span><br><span class="line">	    NVARCHAR(-<span class="number">9</span>),</span><br><span class="line">	    NCHAR(-<span class="number">15</span>),</span><br><span class="line">	    NCLOB(<span class="number">2011</span>),</span><br><span class="line">	    STRUCT(<span class="number">2002</span>),</span><br><span class="line">	    JAVA_OBJECT(<span class="number">2000</span>),</span><br><span class="line">	    DISTINCT(<span class="number">2001</span>),</span><br><span class="line">	    REF(<span class="number">2006</span>),</span><br><span class="line">	    DATALINK(<span class="number">70</span>),</span><br><span class="line">	    ROWID(-<span class="number">8</span>),</span><br><span class="line">	    LONGNVARCHAR(-<span class="number">16</span>),</span><br><span class="line">	    SQLXML(<span class="number">2009</span>),</span><br><span class="line">	    DATETIMEOFFSET(-<span class="number">155</span>);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>SQL</tag>
+        <tag>MyBatis</tag>
       </tags>
   </entry>
 </search>
